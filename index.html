@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bineta Sy | Portfolio Software Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-secondary: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #10b981;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 0.75rem;
+            color: var(--text-color);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .skill-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .tag.highlight {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-github {
+            display: inline-block;
+            background-color: var(--bg-color);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .btn-github:hover {
+            background-color: var(--primary);
+            color: var(--bg-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- En-tête -->
+        <header>
+             <!-- Emplacement de votre photo -->
+            <img src="C:\Users\syb35\Pictures\photo.jpeg" alt="Photo de Bineta Sy" style="
+                width: 130px; 
+                height: 130px; 
+                border-radius: 50%; 
+                object-fit: cover; 
+                border: 3px solid var(--accent); 
+                margin-bottom: 1.5rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            ">
+            <h1>Bineta Sy</h1>
+            <div class="subtitle">Software Engineer</div>
+            <p class="bio">
+                Ingénieure logiciel spécialisée dans la conception d'architectures applicatives web et mobiles robustes. De la gestion complète d'écosystèmes métiers à la mise en place d'architectures distribuées et conteneurisées, je conçois des solutions techniques scalables et optimisées.
+            </p>
+        </header>
+
+        <!-- Section Compétences -->
+        <section id="competences">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                <!-- 1. Backend -->
+                <div class="skill-card">
+                    <h3>Backend & Serveurs</h3>
+                    <div class="tags">
+                        <span class="tag highlight">Python(Django)</span>
+                        <span class="tag highlight">Java JEE</span>
+                        <span class="tag">Hibernate</span>
+                        <span class="tag">Spring</span>
+                        <span class="tag">Tomcat</span>
+                    </div>
+                </div>
+                <!-- 2. Frontend -->
+                <div class="skill-card">
+                    <h3>Frontend & Mobile</h3>
+                    <div class="tags">
+                        <span class="tag highlight">React.js</span>
+                        <span class="tag highlight">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">JavaScript (ES6)</span>
+                    </div>
+                </div>
+                <!-- 3. DevOps -->
+                <div class="skill-card">
+                    <h3>DevOps & Outils</h3>
+                    <div class="tags">
+                        <span class="tag highlight">Docker</span>
+                        <span class="tag highlight">CI/CD</span>
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">GitLab</span>
+                    </div>
+                </div>
+                <!-- 4. Bases de données -->
+                <div class="skill-card">
+                    <h3>Bases de Données</h3>
+                    <div class="tags">
+                        <span class="tag highlight">PostgreSQL</span>
+                        <span class="tag">SQLite3</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projets">
+            <h2>Projets Réalisés</h2>
+            <div class="projects-grid">
+                
+                <!-- Projet 1 -->
+                <div class="project-card">
+                     <div>
+                        <h3>🌾 Ecommerce-Agroteranga</h3>
+                        <p>Plateforme web e-commerce écoresponsable conçue pour numériser la chaîne de valeur agricole et connecter directement les producteurs et consommateurs.</p>
+                        <div class="tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Bineta-Sy/Ecommerce-Agroteranga" target="_blank" class="btn-github">Voir le code sur GitHub</a>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card">
+                    <div>
+                        <h3>📱 Agroteranga-mobile</h3>
+                        <p>Application mobile compagnon optimisée pour les utilisateurs sur le terrain, gérant le mode hors-ligne et le suivi des livraisons en temps réel.</p>
+                        <div class="tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Bineta-Sy/Agroteranga-mobile" target="_blank" class="btn-github">Voir le code sur GitHub</a>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card">
+                    <div>
+                        <h3>🍽️ Gestion-de-Restauration</h3>
+                        <p>Module applicatif complet de gestion de restaurant (commandes en salle, suivi automatisé des stocks et facturation). Réalisé en équipe.</p>
+                        <div class="tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Bineta-Sy/Gestion-de-Restauration" target="_blank" class="btn-github">Voir le code sur GitHub</a>
+                </div>
+
+                <!-- Projet 4 -->
+                        <!-- <div class="project-card">
+                            <div>
+                                <h3>⚙️ Architecture Microservices</h3>
+                                <p>Conception et découpage d'un système distribué backend hautement disponible et tolérant aux pannes, avec persistance isolée.</p>
+                                <div class="tags" style="margin-bottom: 1.5rem;">
+                                    <span class="tag">Java JEE</span>
+                                    <span class="tag">PostgreSQL</span>
+                                    <span class="tag">Docker</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/Bineta-Sy/Architecture-Microservices" target="_blank" class="btn-github">Voir le code sur GitHub</a>
+                        </div> -->
+
+                <!-- Projet 5 (Le Traducteur) -->
+                <div class="project-card">
+                    <div>
+                        <h3>📄 Translator - Traducteur PDF IA</h3>
+                        <p>Application d'entreprise en Java JEE déployée sur Tomcat permettant l'extraction de documents PDF complexes, la persistance avec Hibernate et leur traduction automatique via l'API DeepL.</p>
+                        <div class="tags" style="margin-bottom: 1.5rem;">
+                            <span class="tag">Java JEE</span>
+                            <span class="tag">Tomcat</span>
+                            <span class="tag">Hibernate</span>
+                            <span class="tag">API DeepL</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Bineta-Sy/Traducteur-PDF-AI" target="_blank" class="btn-github">Voir le code sur GitHub</a>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>Intéressé(e) par mon profil ? Discutons de vos projets logiciels.</p>
+            <a href="mailto:votre-email@exemple.com" class="contact-btn">Me contacter par E-mail</a>
+            <p style="margin-top: 2rem; font-size: 0.85rem;">© 2026 Bineta Sy. Propulsé par GitHub Pages.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
